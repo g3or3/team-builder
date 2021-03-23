@@ -25,6 +25,7 @@ export default function MemberForm(props) {
 	return (
 		<div>
 			<form className="formContainer" onSubmit={submitForm}>
+				<h1 className="memberFormHeading">New Member Form:</h1>
 				<input
 					name="name"
 					type="text"
