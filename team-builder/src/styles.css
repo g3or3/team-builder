@@ -18,8 +18,8 @@ body {
 .formContainer {
 	background: #f8f4e5;
 	padding: 50px 100px;
-	border: 2px solid black;
-	box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+	border: 1px solid black;
+	box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 1px black;
 	position: absolute;
 	left: 20%;
 	top: 25%;
@@ -31,10 +31,11 @@ body {
 	overflow: auto;
 	background: #f8f4e5;
 	padding: 10px 80px;
-	border: 2px solid black;
+	border: 1px solid black;
+	box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 1px black;
 	position: absolute;
 	left: 55%;
-	top: 25%;
+	top: 22%;
 	font-size: 20pt;
 	line-height: 40pt;
 	font-family: "Fjalla One";
