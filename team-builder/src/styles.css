@@ -33,7 +33,7 @@ h1 {
 }
 
 .membersContainer {
-	width: auto;
+	width: 17%;
 	height: 55vh;
 	overflow: auto;
 	background: #f8f4e5;
@@ -55,6 +55,17 @@ h1 {
 .member {
 	margin: 15% auto;
 	border-bottom: 2px solid black;
+}
+
+.memberInfo {
+	display: inline-block;
+	width: 70%;
+	text-align: end;
+}
+
+.memberProp {
+	display: inline-block;
+	width: 30%;
 }
 
 input {

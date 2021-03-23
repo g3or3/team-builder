@@ -9,11 +9,15 @@ export default function MemberContainer(props) {
 			{members.map((member) => {
 				return (
 					<div className="member" key={member.email}>
-						<p>{`Name: ${member.name}`}</p>
-						<p>{`Email: ${member.email}`}</p>
-						<p
-							style={{ display: "inline-block" }}
-						>{`Role: ${member.role}`}</p>
+						<span className="memberProp">Name: </span>
+						<p className="memberInfo">{`${member.name}`}</p>
+						<br></br>
+						<span className="memberProp">Email: </span>
+						<p className="memberInfo">{`${member.email}`}</p>
+						<br></br>
+						<span className="memberProp">Role: </span>
+						<p className="memberInfo">{`${member.role}`}</p>
+						<br></br>
 						<button
 							onClick={(event) => removeMember(event, member)}
 						>
