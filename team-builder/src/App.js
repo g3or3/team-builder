@@ -1,4 +1,5 @@
-import MemberForm from "./Form";
+import MemberForm from "./MemberForm";
+import MemberContainer from "./MemberContainer";
 import { useState } from "react";
 
 function App() {
@@ -8,22 +9,17 @@ function App() {
 		setMembers([...members, newMember]);
 	}
 
+	function removeMember(event, oldMember) {
+		event.preventDefault();
+		setMembers(
+			members.filter((member) => member.email !== oldMember.email)
+		);
+	}
+
 	return (
 		<div>
-			<MemberForm update={addMember} />
-			<div className="membersContainer">
-				{members.map((member) => {
-					return (
-						<div className="member" key={member.email}>
-							{`Name: ${member.name}`}
-							<br></br>
-							{`Email: ${member.email}`}
-							<br></br>
-							{`Role: ${member.role}`}
-						</div>
-					);
-				})}
-			</div>
+			<MemberForm addMember={addMember} />
+			<MemberContainer members={members} removeMember={removeMember} />
 		</div>
 	);
 }

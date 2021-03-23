@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function MemberForm(props) {
-	const { update } = props;
+	const { addMember } = props;
 	const formValues = { name: "", email: "", role: "" };
 
 	const [member, setMember] = useState(formValues);
@@ -19,7 +19,7 @@ export default function MemberForm(props) {
 			email: member.email.trim(),
 			role: member.role.trim(),
 		};
-		update(newMember);
+		addMember(newMember);
 	}
 
 	return (
